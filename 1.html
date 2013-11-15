@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <title> - jsFiddle demo</title>
+  
+  <script type='text/javascript' src='//code.jquery.com/jquery-1.9.1.js'></script>
+ 
+
+<script type='text/javascript'>//<![CDATA[ 
+
+$(function () {
+    $('input.more').on('click', function () {
+        var $table = $('#input_fields');
+        var $tr = $table.find('tr').eq(0).clone();
+        $tr.appendTo($table).find('input').val('');
+    });
+});
+//]]>  
+
+</script>
+
+
+</head>
+<body>
+  <form id="quick_post" method="post"> 
+    <table id="input_fields">
+        <tr> 
+            <td><input class="orderinput" type="text" name="product[]" /></td> 
+            <td><input class="orderquan" type="text" name="quantity[]" size="1" maxlength="3" /></td>
+        </tr>
+    </table>
+</form>
+
+<input class="more" type="button" value="Addmore" name="addmore" />
+  
+</body>
+
+
+</html>

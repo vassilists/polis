@@ -1,0 +1,148 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* ----------------------- BOXES ------------------------- */
+
+.box {margin-bottom:15px;}
+
+.box-head{ font-size:20px; line-height:24px; color:#6d89a6; font-weight:normal; background:url(../images/title-line.gif) bottom repeat-x; padding:0 0 9px 0; margin:0;}
+.box-head a{ text-decoration:none;}
+.box-head a:hover{ color:#000;}
+.box-body{ padding:18px 0 0 0;}
+
+.box ul{ padding:0; margin:0;}
+.box ul li{ font-size:15px; line-height:23px;}
+.box ul li a{ color:#656363; text-decoration:none;}
+.box ul li a:hover{ color:#6d89a6; padding:0 0 0 1px;}
+
+.box ol{ padding:0; margin:0; list-style:decimal inside;}
+.box ol li{ font-size:15px; line-height:23px;}
+.box ol li a{ color:#656363; text-decoration:none;}
+.box ol li a:hover{ color:#6d89a6; padding:0 0 0 1px;}
+
+.price{ padding:10px 0}
+
+/* ----------------------- LISTING BOXES ------------------------- */
+
+
+#categories {}
+
+
+#moreinformation {}
+
+
+#information {}
+
+
+#bestsellers {}
+
+
+#ezpages {}
+
+
+#orderhistory {}
+#orderhistory .box-body img {background:#FFFFFF; padding:2px; border:1px solid #AAAAAA; vertical-align:middle; margin:2px 0px 2px 15px;}
+
+
+
+/* ----------------------- BANNER BOXES ------------------------- */
+
+#bannerbox {}
+
+#bannerbox2 {}
+
+#bannerboxall {}
+
+
+
+/* ----------------------- PRODUCT BOXES ------------------------- */
+
+#featured a img, 
+#whatsnew a img, 
+#specials a img, 
+#reviews a img, 
+#manufacturerinfo img, 
+#productnotifications img {margin:0 0 8px;}
+
+#reviews img {margin:5px 0 0;}
+
+
+
+#featured {}
+#featured .box-body{ text-align:center;}
+#featured .box-body .normalprice {text-decoration:line-through; color:#60748a; font-weight:normal; font-size:11px;}
+#featured .box-body .productSpecialPrice, .productSalePrice, .productSpecialPriceSale {color:#60748a; font-weight:bold; font-size:11px;}
+
+
+#whatsnew {}
+#whatsnew .box-body{ text-align:center;}
+#whatsnew .box-body .normalprice {text-decoration:line-through; color:#60748a; font-weight:normal; font-size:11px;}
+#whatsnew .box-body .productSpecialPrice, .productSalePrice, .productSpecialPriceSale {color:#60748a; font-weight:bold; font-size:11px;}
+
+
+#specials {}
+#specials .box-body{ text-align:center;}
+#specials .box-body .normalprice {text-decoration:line-through; color:#60748a; font-weight:normal; font-size:11px;}
+#specials .box-body .productSpecialPrice, .productSalePrice, .productSpecialPriceSale {color:#60748a; font-weight:bold; font-size:11px;}
+
+
+#reviews {}
+#reviews .box-body{ text-align:center;}
+
+#manufacturerinfo {}
+
+
+#productnotifications {}
+#productnotifications .box-body{ text-align:center;}
+
+
+
+
+/* ----------------------- FORM BOXES ------------------------- */
+
+#search {}
+#search .box-body{ text-align:center;}
+#search input{ vertical-align:middle;}
+#search .input1{ border:solid 0px; background:none; width:140px; padding:0 3px;}
+#search span{ display:inline-block; border:solid 1px #d5d6d7;}
+
+
+#manufacturers {}
+#manufacturers .box-body {text-align:center;}
+
+
+#currencies {}
+#currencies .box-body {text-align:center;}
+#currencies select{ width:90%;}
+
+#tellafriend {}
+
+
+#recordcompanies {}
+#recordcompanies .box-body {text-align:center;}
+
+
+#musicgenres {}
+#musicgenres .box-body {text-align:center;}
+
+
+
+/* ----------------------- TEXT BOXES ------------------------- */
+
+#languages {
+	float: right;
+	width: 120px;
+}
+#languages .box-body {text-align:center;}
+
+
+#whosonline {}
+#whosonline .box-body {text-align:center;}
+
+
+#documentcategories {}
+
+
+#shoppingcart {}
+#shoppingcart .cart_line { border-bottom:solid 1px #a5a5a7;}
+#shoppingcart #cartBoxEmpty {text-align:center;}
