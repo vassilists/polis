@@ -17,20 +17,10 @@ function pageHeader($title, $loginPage = 0) {
     echo "<link rel=\"stylesheet\" type=\"text/css\" href=\"contact/stylesheet_tm1.css\">";
     echo "<link rel=\"stylesheet\" type=\"text/css\" media=\"print\" href=\"contact/print_stylesheet.htm\">";
     echo "<script language=\"JavaScript\" src=\"".APP_CONST_DOCROOT."contact/sorttable.js\"></script>\n";
-    //echo "<script language=\"JavaScript\" src=\"".APP_CONST_DOCROOT."contact/addmore.js\"></script>\n";
+    echo "<script language=\"JavaScript\" src=\"https://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js\"></script>\n";
     echo "<script type'text/javascript' src='//code.jquery.com/jquery-1.9.1.js'></script>";
-    echo "<script type='text/javascript'>//<![CDATA[
-
-    $(function () {
-    $('input.more').on('click', function () {
-        var $table = $('#input_fields');
-        var $tr = $table.find('tr').eq(0).clone();
-        $tr.appendTo($table).find('input').val('');
-    });
-});
-//]]>  ";
-
-echo "</script>";
+    echo "<script type'text/javascript' src=\"".APP_CONST_DOCROOT."contact/addmore.js\"/></script>";
+    echo "<script type'text/javascript' src=\"".APP_CONST_DOCROOT."contact/add.js\"/></script>";
     echo "</head>";
     echo "<body id=\"indexBody\" onload=\"window.refresh\">";
     echo "<div class=\"body-bg\">";
