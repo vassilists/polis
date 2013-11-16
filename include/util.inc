@@ -22,6 +22,7 @@ function pageHeader($title, $loginPage = 0) {
     echo "<script type'text/javascript' src=\"".APP_CONST_DOCROOT."contact/addmore.js\"/></script>";
     echo "<script type'text/javascript' src=\"".APP_CONST_DOCROOT."contact/add.js\"/></script>";
     echo "<script type'text/javascript' src=\"".APP_CONST_DOCROOT."contact/remove2.js\"/></script>";
+    echo "<script type'text/javascript' src=\"".APP_CONST_DOCROOT."contact/addremove.js\"/></script>";
     echo "</head>";
     echo "<body id=\"indexBody\" onload=\"window.refresh\">";
     echo "<div class=\"body-bg\">";
@@ -68,7 +69,7 @@ function menu() {
    echo "<ul class=\"menu\">\n";
    echo "<li><a href=\"submit_order.php\">Καταχώρηση Παραγγελίας</a></li>\n";
    echo "<li><a href=\"1.html\">Επισκόπηση Παραγγελίας</a></li>\n";
-   echo "<li><a href=\"2.php\">Λογαριασμός Χρήστη</a></li>\n";
+   echo "<li><a href=\"submit_order2.php\">Καταχώρηση Παραγγελίας 2ο </a></li>\n";
    echo "</ul>\n";
    echo "</div></div></div>";
 }
@@ -102,6 +103,40 @@ echo "<input class=\"less\" type=\"button\" value=\"Remove2\" name=\"remove2\" /
 echo "<input class=\"more\" type=\"button\" value=\"Addmore\" name=\"addmore\" />";
 
      echo "</div></div></div>";
+}
+
+
+function submit_my_order2() {
+    
+    echo "<form action=\"tableaddrow_nw.html\" method=\"get\">";
+echo "<p>";
+echo "<input type=\"button\" value=\"Add\" onclick=\"addRowToTable();\" />";
+echo "<input type=\"button\" value=\"Remove\" onclick=\"removeRowFromTable();\" />";
+echo "<input type=\"button\" value=\"Submit\" onclick=\"validateRow(this.form);\" />";
+echo "<input type=\"checkbox\" id=\"chkValidate\" /> Validate Submit";
+echo "</p>";
+echo "<p>";
+echo "<input type=\"checkbox\" id=\"chkValidateOnKeyPress\" checked=\"checked\" /> Display OnKeyPress";
+echo "<span id=\"spanOutput\" style=\"border: 1px solid #000; padding: 3px;\"> </span>";
+echo "</p>";
+echo "<table border=\"1\" id=\"tblSample\">";
+  echo "<tr>";
+    echo "<th colspan=\"3\">Sample table</th>";
+  echo "</tr>";
+  echo "<tr>";
+    echo "<td>1</td>";
+    echo "<td><input type=\"text\" name=\"txtRow1\" id=\"txtRow1\" size=\"40\" onkeypress=\"keyPressTest(event, this);\" /></td>";
+    echo "<td>";
+    echo "<select name=\"selRow0\">";
+    echo "<option value=\"value0\">text zero</option>";
+    echo "<option value=\"value1\">text one</option>";
+echo    "</select>";
+echo  "</td>";
+echo  "</tr>";
+echo "</table>";
+echo "</form>";
+    
+echo "</div></div></div>";
 }
 
 
