@@ -21,6 +21,7 @@ function pageHeader($title, $loginPage = 0) {
     echo "<script type'text/javascript' src='//code.jquery.com/jquery-1.9.1.js'></script>";
     echo "<script type'text/javascript' src=\"".APP_CONST_DOCROOT."contact/addmore.js\"/></script>";
     echo "<script type'text/javascript' src=\"".APP_CONST_DOCROOT."contact/add.js\"/></script>";
+    echo "<script type'text/javascript' src=\"".APP_CONST_DOCROOT."contact/remove2.js\"/></script>";
     echo "</head>";
     echo "<body id=\"indexBody\" onload=\"window.refresh\">";
     echo "<div class=\"body-bg\">";
@@ -73,16 +74,33 @@ function menu() {
 }
 
 function submit_my_order() {
-    echo "lala";
+    //echo "lala";
+//    echo "<h2>Dynammically Add Another Input Box</h2>";
+
+  //  echo "<form method=\"post\">";
+    //echo "<div id=\"addinput\">";
+ 
+//echo "<p>Product code: <input type=\"text\" id=\"p_new\" size=\"20\" name=\"p_new\" value=\"\" placeholder=\"Input Value\" />";
+//echo "Product quantity: <input type=\"text\" id=\"p_new2\" size=\"20\" name=\"p_new2\" value=\"\" placeholder=\"Input Value\" />";
+//echo "<a href=\"#\" id=\"addNew\">Add</a></p></div></form>";
+//echo "<br/><br/><br/>";
+
     echo "<form id=\"quick_post\" method=\"post\"> ";
     echo "<table id=\"input_fields\">";
         echo "<tr>"; 
+            echo "<td>Product kind</td><td>Color-Size</td></tr><tr>";//<td>remove</td></tr><tr>"; 
             echo "<td><input class=\"orderinput\" type=\"text\" name=\"product[]\" /></td>"; 
-            echo "<td><input class=\"orderquan\" type=\"text\" name=\"quantity[]\" size=\"1\" maxlength=\"3\" /></td>";
-        echo "</tr>";
+            //echo "<td align=\"center\"><input class=\"new_class_for\" type=\"button\" value=\"select\" name=\"bt[]\" /></td>";
+            echo "<td align=\"center\"><a href=\"".APP_CONST_DOCROOT."1.html\"><img src=\"image/edit.png\"/></a></td>";
+            //echo "<td align=\"center\"><a href=\"javascript:void(0);\" class=\"less\"><font color=\"blue\">Remove</font></a></td>";
+            //echo "<td><input class=\"less\" type=\"button\" value=\"Remove\" name=\"remove[]\" /></td>";
+            //echo "<td>lala</td>";
+            echo "</tr>";
     echo "</table>";
 echo "</form>";
+echo "<input class=\"less\" type=\"button\" value=\"Remove2\" name=\"remove2\" />";
 echo "<input class=\"more\" type=\"button\" value=\"Addmore\" name=\"addmore\" />";
+
      echo "</div></div></div>";
 }
 

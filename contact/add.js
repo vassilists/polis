@@ -1,4 +1,3 @@
-
 $(function() {
 var addDiv = $('#addinput');
 var i = $('#addinput p').size() + 1;

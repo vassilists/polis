@@ -1,13 +1,13 @@
  $(document).ready(function() {
 
-    addmore();
+    addmore2();
 });
 
-function addmore(){
-    alert ("ok");
+function addmore2(){
+    
      $('input.more').on('click', function () {
         var $table = $('#input_fields');
-        var $tr = $table.find('tr').eq(0).clone();
+        var $tr = $table.find('tr').eq(1).clone();
         $tr.appendTo($table).find('input').val('');
     });
     
