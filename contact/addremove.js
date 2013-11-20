@@ -70,10 +70,8 @@ function openInNewWindow(frm)
   // submit
   frm.submit();
 }
-function validateRow(frm)
-{
-  var chkb = document.getElementById('chkValidate');
-  if (chkb.checked) {
+function checkOrdNo(frm){
+    
     var tbl = document.getElementById('tblSample');
     var lastRow = tbl.rows.length - 1;
     var i;
@@ -84,6 +82,24 @@ function validateRow(frm)
         return;
       }
     }
-  }
+  //}
+  openInNewWindow(frm);
+    
+}
+function validateRow(frm)
+{
+  //var chkb = document.getElementById('chkValidate');
+  //if (chkb.checked) {
+    var tbl = document.getElementById('tblSample');
+    var lastRow = tbl.rows.length - 1;
+    var i;
+    for (i=1; i<=lastRow; i++) {
+      var aRow = document.getElementById('txtRow' + i);
+      if (aRow.value.length <= 0) {
+        alert('Row ' + i + ' is empty');
+        return;
+      }
+    }
+  //}
   openInNewWindow(frm);
 }

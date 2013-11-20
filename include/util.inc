@@ -101,10 +101,6 @@ function submit_my_order2() {
     
 echo "<form action=\"epilogi.php\" method=\"get\">";
 
-//echo "<p>";
-//echo "<input type=\"checkbox\" id=\"chkValidateOnKeyPress\" checked=\"checked\" /> Display OnKeyPress";
-//echo "<span id=\"spanOutput\" style=\"border: 1px solid #000; padding: 3px;\"> </span>";
-//echo "</p>";
 echo "<table border=\"1\" id=\"tblSample\">";
   echo "<tr>";
     echo "<th colspan=\"3\">Sample table</th>";
@@ -112,21 +108,15 @@ echo "<table border=\"1\" id=\"tblSample\">";
   echo "<tr>";
     echo "<td>1</td>";
     echo "<td><input type=\"text\" name=\"txtRow1\" id=\"txtRow1\" size=\"40\" /></td>";//onkeypress=\"keyPressTest(event, this);\" /></td>";
-    //echo "<td>";
-    //echo "<input type=\"button\" value=\"Remove\" onclick=\"removeRowFromTable();\" />";
-    //echo "<select name=\"selRow0\">";
-    //echo "<option value=\"value0\">text zero</option>";
-    //echo "<option value=\"value1\">text one</option>";
-    //echo    "</select>";
-//echo  "</td>";
+
     echo "<td align=\"center\"><a id=\"imag\" href=\"".APP_CONST_DOCROOT."1.html\"><img src=\"image/edit.png\"/></a></td>";
 echo  "</tr>";
 echo "</table>";
 echo "<p>";
 echo "<input type=\"button\" value=\"Add\" onclick=\"addRowToTable();\" />";
 echo "<input type=\"button\" value=\"Remove\" onclick=\"removeRowFromTable();\" />";
-echo "<input type=\"button\" value=\"Submit\" onclick=\"validateRow(this.form);\" />";
-//echo "<input type=\"checkbox\" id=\"chkValidate\" /> Validate Submit";
+echo "<input type=\"button\" value=\"Check\" onclick=\"checkOrdNo(this.form);\" />";
+echo "<input type=\"submit\" value=\"Submit\" />";
 echo "</p>";
 echo "</form>";
     
