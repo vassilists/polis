@@ -19,19 +19,19 @@ function addRowToTable()
   el.name = 'txtRow' + iteration;
   el.id = 'txtRow' + iteration;
   el.size = 40;
-  
-  el.onkeypress = keyPressTest;
   cellRight.appendChild(el);
-  
-  // select cell
-  var cellRightSel = row.insertCell(2);
-  var sel = document.createElement('select');
-  sel.name = 'selRow' + iteration;
-  sel.options[0] = new Option('text zero', 'value0');
-  sel.options[1] = new Option('text one', 'value1');
-  cellRightSel.appendChild(sel);
+
+  var cellRightBut = row.insertCell(2);
+  //var but = document.createElement('a');
+  //var imag = document.createElement('img');
+  //but.setAttributeNode('imag');
+  //but.setAttribute('href','http://localhost/polis/1.html');
+  //imag.setAttribute('src','image/edit.png'); 
+  var a = document.getElementById('imag').cloneNode();
+  cellRightBut.appendChild(a);
+
 }
-function keyPressTest(e, obj)
+/*function keyPressTest(e, obj)
 {
   var validateChkb = document.getElementById('chkValidateOnKeyPress');
   if (validateChkb.checked) {
@@ -51,12 +51,12 @@ function keyPressTest(e, obj)
     }
     displayObj.innerHTML = objId + ' : ' + String.fromCharCode(key);
   }
-}
+}*/
 function removeRowFromTable()
 {
   var tbl = document.getElementById('tblSample');
   var lastRow = tbl.rows.length;
-  if (lastRow > 2) tbl.deleteRow(lastRow - 1);
+  if (lastRow > 2) tbl.deleteRow(lastRow - 1); 
 }
 function openInNewWindow(frm)
 {

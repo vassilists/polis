@@ -75,16 +75,7 @@ function menu() {
 }
 
 function submit_my_order() {
-    //echo "lala";
-//    echo "<h2>Dynammically Add Another Input Box</h2>";
 
-  //  echo "<form method=\"post\">";
-    //echo "<div id=\"addinput\">";
- 
-//echo "<p>Product code: <input type=\"text\" id=\"p_new\" size=\"20\" name=\"p_new\" value=\"\" placeholder=\"Input Value\" />";
-//echo "Product quantity: <input type=\"text\" id=\"p_new2\" size=\"20\" name=\"p_new2\" value=\"\" placeholder=\"Input Value\" />";
-//echo "<a href=\"#\" id=\"addNew\">Add</a></p></div></form>";
-//echo "<br/><br/><br/>";
 
     echo "<form id=\"quick_post\" method=\"post\"> ";
     echo "<table id=\"input_fields\">";
@@ -108,32 +99,35 @@ echo "<input class=\"more\" type=\"button\" value=\"Addmore\" name=\"addmore\" /
 
 function submit_my_order2() {
     
-    echo "<form action=\"tableaddrow_nw.html\" method=\"get\">";
-echo "<p>";
-echo "<input type=\"button\" value=\"Add\" onclick=\"addRowToTable();\" />";
-echo "<input type=\"button\" value=\"Remove\" onclick=\"removeRowFromTable();\" />";
-echo "<input type=\"button\" value=\"Submit\" onclick=\"validateRow(this.form);\" />";
-echo "<input type=\"checkbox\" id=\"chkValidate\" /> Validate Submit";
-echo "</p>";
-echo "<p>";
-echo "<input type=\"checkbox\" id=\"chkValidateOnKeyPress\" checked=\"checked\" /> Display OnKeyPress";
-echo "<span id=\"spanOutput\" style=\"border: 1px solid #000; padding: 3px;\"> </span>";
-echo "</p>";
+echo "<form action=\"epilogi.php\" method=\"get\">";
+
+//echo "<p>";
+//echo "<input type=\"checkbox\" id=\"chkValidateOnKeyPress\" checked=\"checked\" /> Display OnKeyPress";
+//echo "<span id=\"spanOutput\" style=\"border: 1px solid #000; padding: 3px;\"> </span>";
+//echo "</p>";
 echo "<table border=\"1\" id=\"tblSample\">";
   echo "<tr>";
     echo "<th colspan=\"3\">Sample table</th>";
   echo "</tr>";
   echo "<tr>";
     echo "<td>1</td>";
-    echo "<td><input type=\"text\" name=\"txtRow1\" id=\"txtRow1\" size=\"40\" onkeypress=\"keyPressTest(event, this);\" /></td>";
-    echo "<td>";
-    echo "<select name=\"selRow0\">";
-    echo "<option value=\"value0\">text zero</option>";
-    echo "<option value=\"value1\">text one</option>";
-echo    "</select>";
-echo  "</td>";
+    echo "<td><input type=\"text\" name=\"txtRow1\" id=\"txtRow1\" size=\"40\" /></td>";//onkeypress=\"keyPressTest(event, this);\" /></td>";
+    //echo "<td>";
+    //echo "<input type=\"button\" value=\"Remove\" onclick=\"removeRowFromTable();\" />";
+    //echo "<select name=\"selRow0\">";
+    //echo "<option value=\"value0\">text zero</option>";
+    //echo "<option value=\"value1\">text one</option>";
+    //echo    "</select>";
+//echo  "</td>";
+    echo "<td align=\"center\"><a id=\"imag\" href=\"".APP_CONST_DOCROOT."1.html\"><img src=\"image/edit.png\"/></a></td>";
 echo  "</tr>";
 echo "</table>";
+echo "<p>";
+echo "<input type=\"button\" value=\"Add\" onclick=\"addRowToTable();\" />";
+echo "<input type=\"button\" value=\"Remove\" onclick=\"removeRowFromTable();\" />";
+echo "<input type=\"button\" value=\"Submit\" onclick=\"validateRow(this.form);\" />";
+//echo "<input type=\"checkbox\" id=\"chkValidate\" /> Validate Submit";
+echo "</p>";
 echo "</form>";
     
 echo "</div></div></div>";
