@@ -98,9 +98,14 @@ echo "<input class=\"more\" type=\"button\" value=\"Addmore\" name=\"addmore\" /
 function ypobolh() {
 
 
-    echo "lala";
-    if (isset($_POST["txtRow1"]))
+    echo "lala <br/>";
+    if (isset($_POST["tblSample"]))
         echo $_POST["txtRow1"];
+        echo "<br/>";
+        echo $_POST["txtRow2"];
+        echo "<br/>";
+        echo $_POST["txtRow3"];
+        echo "<br/>";
      echo "</div></div></div>";
 }
 
@@ -115,8 +120,8 @@ echo "<table border=\"1\" id=\"tblSample\">";
   echo "<tr>";
     echo "<td>1</td>";
     echo "<td><input type=\"text\" name=\"txtRow1\" id=\"txtRow1\" size=\"40\" /></td>";//onkeypress=\"keyPressTest(event, this);\" /></td>";
-
-    echo "<td align=\"center\"><a id=\"imag\" href=\"".APP_CONST_DOCROOT."1.html\"><img src=\"image/edit.png\"/></a></td>";
+//$textrow = ;
+    echo "<td align=\"center\"><a id=\"imag\" href=\"".APP_CONST_DOCROOT."select_color_size.php?id=".$textrow."\"><img src=\"image/edit.png\"/></a></td>";
 echo  "</tr>";
 echo "</table>";
 echo "<p>";
