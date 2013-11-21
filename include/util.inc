@@ -95,11 +95,18 @@ echo "<input class=\"more\" type=\"button\" value=\"Addmore\" name=\"addmore\" /
 
      echo "</div></div></div>";
 }
+function ypobolh() {
 
+
+    echo "lala";
+    if (isset($_POST["txtRow1"]))
+        echo $_POST["txtRow1"];
+     echo "</div></div></div>";
+}
 
 function submit_my_order2() {
     
-echo "<form action=\"epilogi.php\" method=\"get\">";
+echo "<form action=\"ypobolh.php\" method=\"post\">";
 
 echo "<table border=\"1\" id=\"tblSample\">";
   echo "<tr>";
@@ -115,7 +122,7 @@ echo "</table>";
 echo "<p>";
 echo "<input type=\"button\" value=\"Add\" onclick=\"addRowToTable();\" />";
 echo "<input type=\"button\" value=\"Remove\" onclick=\"removeRowFromTable();\" />";
-echo "<input type=\"button\" value=\"Check\" onclick=\"checkOrdNo(this.form);\" />";
+//echo "<input type=\"button\" value=\"Check\" onclick=\"checkOrdNo(this.form);\" />";
 echo "<input type=\"submit\" value=\"Submit\" />";
 echo "</p>";
 echo "</form>";
