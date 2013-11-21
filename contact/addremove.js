@@ -22,11 +22,6 @@ function addRowToTable()
   cellRight.appendChild(el);
 
   var cellRightBut = row.insertCell(2);
-  //var but = document.createElement('a');
-  //var imag = document.createElement('img');
-  //but.setAttributeNode('imag');
-  //but.setAttribute('href','http://localhost/polis/1.html');
-  //imag.setAttribute('src','image/edit.png'); 
   var a = document.getElementById('imag').cloneNode();
   cellRightBut.appendChild(a);
 
