@@ -76,23 +76,75 @@ function menu() {
 
 function submit_my_order() {
 
-
-    echo "<form id=\"quick_post\" method=\"post\"> ";
+if (isset($_POST["prno"])){
+	echo "<form id=\"quick_post2\" method=\"post\" action=\"\" >";
+        echo "<table id=\"input_fields2\" border=\"1\">";
+        echo "<tr>"; 
+        echo "<td>α/α</td><td>Κωδικός προϊόντος</td>";
+        echo "</tr>";
+        $prodno = $_POST["product"];
+        for ($i=0; $i<$prodno; $i++){
+            $j= $i+1;
+            echo "<tr><td>".$j."</td><td><input type=\"text\" name=\"code[]\"/></td></tr>";
+        }
+        echo "</table>";
+        echo "<input type=\"hidden\" name=\"prodno\" value=\"".$prodno."\"/>";
+        echo "<input class=\"more\" type=\"submit\" value=\"Select Color-Size\" name=\"prno2\" />";
+        echo "</form>";
+}
+else if(isset($_POST["prno2"])){
+    
+    //echo "lala";
+    $count_prod = $_POST["prodno"]*1;
+    //echo $count_prod."<br/>";
+    for ($i=0; $i<$count_prod; $i++){
+        $j = $i + 1;
+        echo $_POST["code"][$i];
+        echo "<br>";
+        $kvdikos = $_POST["code"][$i];
+        $query = "select p.id,p.category_id, p.size_id,p.desc_en,pc.cname,pc.id ";
+        $query .= "from product p inner join product_color pc on pc.product_id=p.id ";
+        $query .= "where p.id=".$kvdikos;
+        
+        $query2 = "select la.aa, la.lekt from product p inner join l_size_a la on la.id=p.size_id ";
+        $query2 .= "where p.id=".$kvdikos;
+        
+        //echo $query2;
+        echo "<br>";
+        echo "<table border=\"1\"><tr><td>size:</td>";
+        $result = exec_query($query);
+        $result2 = exec_query($query2);
+        if (mysql_num_rows($result2) > 0) {
+            for ($k2=0; $k2< mysql_num_rows($result2); $k2++){
+                $row2 = mysql_fetch_array($result2);
+                echo "<td>".$row2['lekt']."</td>";
+                }
+        }
+        echo "</tr>";
+        
+        if (mysql_num_rows($result) > 0) {
+            for ($k=0; $k< mysql_num_rows($result); $k++){
+                $row = mysql_fetch_array($result);
+                //echo $row['desc_en'];
+                //echo "<br>----------------------------------------------<br>";
+                echo "<tr><td>".$row['cname']."</td></tr>";
+            }
+        }
+        echo "</table>";
+    }
+}
+else {        
+    echo "<form id=\"quick_post\" method=\"post\" action=\"\" >";
     echo "<table id=\"input_fields\">";
         echo "<tr>"; 
-            echo "<td>Product kind</td><td>Color-Size</td></tr><tr>";//<td>remove</td></tr><tr>"; 
-            echo "<td><input class=\"orderinput\" type=\"text\" name=\"product[]\" /></td>"; 
-            //echo "<td align=\"center\"><input class=\"new_class_for\" type=\"button\" value=\"select\" name=\"bt[]\" /></td>";
-            echo "<td align=\"center\"><a href=\"".APP_CONST_DOCROOT."1.html\"><img src=\"image/edit.png\"/></a></td>";
-            //echo "<td align=\"center\"><a href=\"javascript:void(0);\" class=\"less\"><font color=\"blue\">Remove</font></a></td>";
-            //echo "<td><input class=\"less\" type=\"button\" value=\"Remove\" name=\"remove[]\" /></td>";
-            //echo "<td>lala</td>";
+            echo "<td>Products to order</td>"; 
+            echo "<td><input class=\"orderinput\" type=\"text\" name=\"product\" /></td>"; 
             echo "</tr>";
     echo "</table>";
+    echo "<input class=\"more\" type=\"submit\" value=\"Submit\" name=\"prno\" />";
 echo "</form>";
-echo "<input class=\"less\" type=\"button\" value=\"Remove2\" name=\"remove2\" />";
-echo "<input class=\"more\" type=\"button\" value=\"Addmore\" name=\"addmore\" />";
 
+}
      echo "</div></div></div>";
 }
 function ypobolh() {
